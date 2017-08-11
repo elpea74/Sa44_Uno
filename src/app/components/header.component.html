@@ -1,0 +1,19 @@
+
+<h1>Uno Cards</h1>
+
+<h2><code>Player Number: {{playerNum}}</code></h2>
+
+<button type="button" (click)="AddPlayers()">Add</button>
+<button type="button" (click)="RemovePlayers()">Remove</button>
+<button type="button" (click)="Start()">Start</button>
+<br>
+<table>
+  <tr *ngFor="let p of playerList; let n=index">
+    <td>Player {{n+1}}: </td>
+    <td *ngFor="let i of p.cards">
+      <tr>
+        <img [src]="i.imageUrl" [alt]="i.name" />
+      </tr>
+    </td>
+  </tr>
+</table>
